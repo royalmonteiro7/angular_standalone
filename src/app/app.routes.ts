@@ -6,7 +6,8 @@ export const routes: Routes = [
     // { path: '', redirectTo: 'home', pathMatch: 'full' },
     // { path: '', component: HomeComponent },
     // { path: 'about/:id', component: AboutComponent },
-    { path: '', loadComponent: () => import('./home/home.component').then((c) => c.HomeComponent) },
-    { path: 'about', loadComponent: () => import('./components/about/about.component').then((c) => c.AboutComponent) },
-    { path: 'admin', loadComponent: () => import('./admin/admin.component').then((c) => c.AdminComponent) }
+    { path: '', loadComponent: () => import('./pages/home/home.component').then((c) => c.HomeComponent) },
+    { path: 'about', loadComponent: () => import('./pages/about/about.component').then((c) => c.AboutComponent) },
+    { path: 'admin', loadComponent: () => import('./pages/admin/admin.component').then((c) => c.AdminComponent) },
+    { path: 'courses', loadComponent: () => import('./pages/courses/courses.component').then((c) => c.CoursesComponent) }
 ];
